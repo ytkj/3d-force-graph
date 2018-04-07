@@ -237,7 +237,7 @@ export default Kapsule({
         if (!bObj) return -1;
 
         // Prioritize nodes over links
-        const isNode = o => o.__graphObjType === 'node';
+        const isNode = o => o && o.__graphObjType === 'node';
         return isNode(bObj) - isNode(aObj);
       })
       .tooltipContent(obj => {
